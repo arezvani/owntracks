@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ksqldb-cli
+  name: ksqldb-cli
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: ksqldb-cli
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ksqldb-cli
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - sleep infinity
+        image: docker.io/confluentinc/cp-ksqldb-cli:7.6.0
+        imagePullPolicy: IfNotPresent
+        name: ksqldb-cli
+        resources:
+          limits:
+            cpu: '1'
+            ephemeral-storage: 1000Mi
+            memory: 2000Mi
+          requests:
+            cpu: 100m
+            ephemeral-storage: 100Mi
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 10
+

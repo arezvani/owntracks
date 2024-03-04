@@ -1,0 +1,12 @@
+curl -X POST   -H "Content-Type: application/json"   --data '{ "name": "mqtt", "config":
+{
+    "connector.class" : "io.confluent.connect.mqtt.MqttSourceConnector",
+    "mqtt.server.uri" : "tcp://external.abriment.com:30733",
+    "mqtt.topics" : "owntracks/#",
+    "kafka.topic" : "data_mqtt",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "tasks.max" : "1",
+    "confluent.topic.bootstrap.servers" : "kafka-60046646:9092",
+    "confluent.topic.replication.factor" : "1"
+  }}' http://localhost:8083/connectors

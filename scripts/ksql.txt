@@ -1,0 +1,21 @@
+create stream data_demo_stream  (who varchar KEY, batt INTEGER, lon DOUBLE, lat DOUBLE, tst BIGINT, alt INTEGER, vel DOUBLE)
+with (kafka_topic = 'data_mqtt', value_format='JSON', KEY_FORMAT = 'KAFKA');
+
+CREATE table runner_status with (value_format='JSON') AS 
+select who
+, min(vel) as min_speed
+, max(vel) as max_speed
+, min(GEO_DISTANCE(lat, lon, -33.87014, 151.211945, 'km')) as dist_to_finish
+, count(*) as num_events 
+from data_demo_stream WINDOW TUMBLING (size 5 minute) 
+group by who;
+
+
+create stream runner_location with (value_format='JSON') as
+select who
+, tst as event_time
+, concat(concat(CAST(LAT AS STRING), ','), CAST(LON AS STRING)) as LOCATION
+, alt
+, batt
+, vel
+from data_demo_stream ;

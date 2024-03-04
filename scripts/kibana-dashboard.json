@@ -1,0 +1,192 @@
+[
+{
+  "attributes.fieldAttrs": "{}",
+  "attributes.fields": "[]",
+  "attributes.runtimeFieldMap": "{}",
+  "attributes.timeFieldName": "EVENT_TIME",
+  "attributes.title": "runner_status*",
+  "attributes.typeMeta": "{}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "bcc864f0-d9e2-11ee-9c3b-1d397bdc3faa",
+  "migrationVersion.index-pattern": "7.11.0",
+  "references": [],
+  "type": "index-pattern",
+  "updated_at": "2024-03-04T04:50:34.815Z",
+  "version": "WzEwMTcsMV0="
+},
+{
+  "attributes.description": "",
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}",
+  "attributes.title": "Avg Speed",
+  "attributes.uiStateJSON": "{}",
+  "attributes.version": 1,
+  "attributes.visState": "{\"title\":\"Avg Speed\",\"type\":\"gauge\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"MAX_SPEED\",\"customLabel\":\"Avg Speed (km/h)\"},\"schema\":\"metric\"}],\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":8},{\"from\":8,\"to\":14},{\"from\":14,\"to\":18}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"\",\"fontSize\":60,\"labelColor\":true},\"alignment\":\"horizontal\"}}}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "48362dd0-7f8c-11e9-b02d-53dea8180a7f",
+  "migrationVersion.visualization": "7.17.0",
+  "references": [
+    {
+      "id": "bcc864f0-d9e2-11ee-9c3b-1d397bdc3faa",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "visualization",
+  "updated_at": "2024-03-04T05:01:44.431Z",
+  "version": "WzEyNjUsMV0="
+},
+{
+  "attributes.description": "",
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}",
+  "attributes.title": "grid",
+  "attributes.uiStateJSON": "{}",
+  "attributes.version": 1,
+  "attributes.visState": "{\"title\":\"grid\",\"type\":\"table\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"params\":{\"field\":\"DIST_TO_FINISH\",\"customLabel\":\"Dist To Finish (km)\"},\"schema\":\"metric\"},{\"id\":\"3\",\"enabled\":true,\"type\":\"min\",\"params\":{\"field\":\"MIN_SPEED\",\"customLabel\":\"Min Speed (km/h)\"},\"schema\":\"metric\"},{\"id\":\"4\",\"enabled\":true,\"type\":\"max\",\"params\":{\"field\":\"MAX_SPEED\",\"customLabel\":\"Max Speed (km/h)\"},\"schema\":\"metric\"}],\"params\":{\"perPage\":5,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false,\"showToolbar\":true,\"percentageCol\":\"\",\"autoFitRowToContent\":false}}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "cdb5dba0-7f8b-11e9-b02d-53dea8180a7f",
+  "migrationVersion.visualization": "7.17.0",
+  "references": [
+    {
+      "id": "bcc864f0-d9e2-11ee-9c3b-1d397bdc3faa",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "visualization",
+  "updated_at": "2024-03-04T05:02:21.943Z",
+  "version": "WzEyOTYsMV0="
+},
+{
+  "attributes.description": "",
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}",
+  "attributes.title": "Num Runners",
+  "attributes.uiStateJSON": "{}",
+  "attributes.version": 1,
+  "attributes.visState": "{\"title\":\"Num Runners\",\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"params\":{\"field\":\"_type\",\"customLabel\":\"Number Runners Tracked\"},\"schema\":\"metric\"}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}}}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "769cd750-7f8c-11e9-b02d-53dea8180a7f",
+  "migrationVersion.visualization": "7.17.0",
+  "references": [
+    {
+      "id": "bcc864f0-d9e2-11ee-9c3b-1d397bdc3faa",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "visualization",
+  "updated_at": "2024-03-04T04:54:09.353Z",
+  "version": "WzExMzQsMV0="
+},
+{
+  "attributes.fieldAttrs": "{\"LOCATION\":{\"count\":1}}",
+  "attributes.fields": "[]",
+  "attributes.runtimeFieldMap": "{}",
+  "attributes.timeFieldName": "EVENT_TIME",
+  "attributes.title": "runner_location*",
+  "attributes.typeMeta": "{}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "c2830790-d967-11ee-9c3b-1d397bdc3faa",
+  "migrationVersion.index-pattern": "7.11.0",
+  "references": [],
+  "type": "index-pattern",
+  "updated_at": "2024-03-03T14:23:37.176Z",
+  "version": "WzUzOCwxXQ=="
+},
+{
+  "attributes.description": "",
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}",
+  "attributes.title": "Alt Bar",
+  "attributes.uiStateJSON": "{}",
+  "attributes.version": 1,
+  "attributes.visState": "{\"title\":\"Alt Bar\",\"type\":\"line\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"params\":{\"field\":\"ALT\",\"customLabel\":\"Alt (m)\"},\"schema\":\"metric\"},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"params\":{\"field\":\"EVENT_TIME\",\"timeRange\":{\"from\":\"now-15h\",\"to\":\"now\"},\"useNormalizedEsInterval\":true,\"scaleMetricValues\":false,\"interval\":\"auto\",\"used_interval\":\"10m\",\"drop_partials\":false,\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"},\"schema\":\"segment\"}],\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"filter\":true},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Alt (m)\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Alt (m)\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"circlesRadius\":1}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"palette\":{\"type\":\"palette\",\"name\":\"kibana_palette\"},\"isVislibVis\":true,\"detailedTooltip\":true,\"fittingFunction\":\"linear\",\"truncateLegend\":true,\"maxLegendLines\":1,\"labels\":{},\"radiusRatio\":9,\"thresholdLine\":{\"show\":false,\"value\":10,\"width\":1,\"style\":\"full\",\"color\":\"#E7664C\"}}}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "6c5a5250-7fa9-11e9-871a-5b4ee90de07e",
+  "migrationVersion.visualization": "7.17.0",
+  "references": [
+    {
+      "id": "c2830790-d967-11ee-9c3b-1d397bdc3faa",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "visualization",
+  "updated_at": "2024-03-04T04:42:52.336Z",
+  "version": "Wzg2NiwxXQ=="
+},
+{
+  "attributes.description": "",
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}",
+  "attributes.title": "Speed Line",
+  "attributes.uiStateJSON": "{}",
+  "attributes.version": 1,
+  "attributes.visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Speed (km/h)\",\"field\":\"VEL\"},\"schema\":\"metric\",\"type\":\"max\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"drop_partials\":false,\"extended_bounds\":{},\"field\":\"EVENT_TIME\",\"interval\":\"auto\",\"min_doc_count\":1,\"scaleMetricValues\":false,\"timeRange\":{\"from\":\"now-15h\",\"to\":\"now\"},\"useNormalizedEsInterval\":true,\"used_interval\":\"10m\"},\"schema\":\"segment\",\"type\":\"date_histogram\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":true,\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"detailedTooltip\":true,\"fittingFunction\":\"linear\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"isVislibVis\":true,\"labels\":{},\"legendPosition\":\"right\",\"maxLegendLines\":1,\"palette\":{\"name\":\"kibana_palette\",\"type\":\"palette\"},\"radiusRatio\":9,\"seriesParams\":[{\"circlesRadius\":1,\"data\":{\"id\":\"1\",\"label\":\"Speed (km/h)\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"cardinal\",\"lineWidth\":2.5,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"thresholdLine\":{\"color\":\"#E7664C\",\"show\":false,\"style\":\"full\",\"value\":10,\"width\":1},\"times\":[],\"truncateLegend\":true,\"type\":\"line\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"defaultYExtents\":false,\"max\":14,\"min\":9,\"mode\":\"normal\",\"setYExtents\":true,\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Speed (km/h)\"},\"type\":\"value\"}]},\"title\":\"Speed Line\",\"type\":\"line\"}",
+  "coreMigrationVersion": "7.17.3",
+  "id": "d5145b30-8079-11e9-846a-91d0a70f35bb",
+  "migrationVersion.visualization": "7.17.0",
+  "references": [
+    {
+      "id": "c2830790-d967-11ee-9c3b-1d397bdc3faa",
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "visualization",
+  "updated_at": "2024-03-04T04:45:02.825Z",
+  "version": "WzkyMSwxXQ=="
+},
+{
+  "attributes.description": "",
+  "attributes.hits": 0,
+  "attributes.kibanaSavedObjectMeta.searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"highlightAll\":true,\"version\":true,\"filter\":[]}",
+  "attributes.optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+  "attributes.panelsJSON": "[{\"version\":\"7.17.3\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":0,\"w\":16,\"h\":12,\"i\":\"2\"},\"panelIndex\":\"2\",\"embeddableConfig\":{\"vis\":{\"defaultColors\":{\"0 - 8\":\"rgb(0,104,55)\",\"14 - 18\":\"rgb(165,0,38)\",\"8 - 14\":\"rgb(255,255,190)\"},\"legendOpen\":false},\"enhancements\":{}},\"panelRefName\":\"panel_2\"},{\"version\":\"7.17.3\",\"type\":\"visualization\",\"gridData\":{\"x\":0,\"y\":15,\"w\":24,\"h\":12,\"i\":\"3\"},\"panelIndex\":\"3\",\"embeddableConfig\":{\"enhancements\":{}},\"panelRefName\":\"panel_3\"},{\"version\":\"7.17.3\",\"type\":\"visualization\",\"gridData\":{\"x\":40,\"y\":0,\"w\":8,\"h\":12,\"i\":\"4\"},\"panelIndex\":\"4\",\"embeddableConfig\":{\"enhancements\":{}},\"panelRefName\":\"panel_4\"},{\"version\":\"7.17.3\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":24,\"w\":24,\"h\":12,\"i\":\"5\"},\"panelIndex\":\"5\",\"embeddableConfig\":{\"enhancements\":{}},\"panelRefName\":\"panel_5\"},{\"version\":\"7.17.3\",\"type\":\"visualization\",\"gridData\":{\"x\":24,\"y\":12,\"w\":24,\"h\":12,\"i\":\"6\"},\"panelIndex\":\"6\",\"embeddableConfig\":{\"enhancements\":{}},\"panelRefName\":\"panel_6\"},{\"version\":\"7.17.3\",\"type\":\"map\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"4c751a3c-58f1-4c60-be4f-b9b1ef644a35\"},\"panelIndex\":\"4c751a3c-58f1-4c60-be4f-b9b1ef644a35\",\"embeddableConfig\":{\"attributes\":{\"title\":\"Map\",\"description\":\"\",\"layerListJSON\":\"[{\\\"sourceDescriptor\\\":{\\\"type\\\":\\\"EMS_TMS\\\",\\\"isAutoSelect\\\":true},\\\"id\\\":\\\"073dfa83-e7d8-472c-b9d5-f43ac927b878\\\",\\\"label\\\":null,\\\"minZoom\\\":0,\\\"maxZoom\\\":24,\\\"alpha\\\":1,\\\"visible\\\":true,\\\"style\\\":{\\\"type\\\":\\\"TILE\\\"},\\\"includeInFitToBounds\\\":true,\\\"type\\\":\\\"VECTOR_TILE\\\"},{\\\"alpha\\\":0.75,\\\"id\\\":\\\"3113961d-f92e-4b41-92c9-34552ff72f03\\\",\\\"includeInFitToBounds\\\":true,\\\"joins\\\":[],\\\"label\\\":\\\"map\\\",\\\"maxZoom\\\":24,\\\"minZoom\\\":0,\\\"sourceDescriptor\\\":{\\\"applyForceRefresh\\\":true,\\\"applyGlobalQuery\\\":true,\\\"applyGlobalTime\\\":true,\\\"geoField\\\":\\\"LOCATION\\\",\\\"id\\\":\\\"cba65b0b-e8bc-4747-9bfe-2ecebb9f5492\\\",\\\"indexPatternId\\\":\\\"c2830790-d967-11ee-9c3b-1d397bdc3faa\\\",\\\"metrics\\\":[{\\\"field\\\":\\\"_type\\\",\\\"type\\\":\\\"cardinality\\\"}],\\\"requestType\\\":\\\"point\\\",\\\"resolution\\\":\\\"MOST_FINE\\\",\\\"type\\\":\\\"ES_GEO_GRID\\\"},\\\"style\\\":{\\\"isTimeAware\\\":true,\\\"properties\\\":{\\\"fillColor\\\":{\\\"options\\\":{\\\"color\\\":\\\"Yellow to Red\\\",\\\"colorCategory\\\":\\\"palette_0\\\",\\\"field\\\":{\\\"name\\\":\\\"cardinality_of__type\\\",\\\"origin\\\":\\\"source\\\"},\\\"fieldMetaOptions\\\":{\\\"isEnabled\\\":false,\\\"sigma\\\":3},\\\"type\\\":\\\"ORDINAL\\\"},\\\"type\\\":\\\"DYNAMIC\\\"},\\\"icon\\\":{\\\"options\\\":{\\\"value\\\":\\\"marker\\\"},\\\"type\\\":\\\"STATIC\\\"},\\\"iconOrientation\\\":{\\\"options\\\":{\\\"orientation\\\":0},\\\"type\\\":\\\"STATIC\\\"},\\\"iconSize\\\":{\\\"options\\\":{\\\"size\\\":6},\\\"type\\\":\\\"STATIC\\\"},\\\"labelBorderColor\\\":{\\\"options\\\":{\\\"color\\\":\\\"#FFFFFF\\\"},\\\"type\\\":\\\"STATIC\\\"},\\\"labelBorderSize\\\":{\\\"options\\\":{\\\"size\\\":\\\"SMALL\\\"}},\\\"labelColor\\\":{\\\"options\\\":{\\\"color\\\":\\\"#000000\\\"},\\\"type\\\":\\\"STATIC\\\"},\\\"labelSize\\\":{\\\"options\\\":{\\\"size\\\":14},\\\"type\\\":\\\"STATIC\\\"},\\\"labelText\\\":{\\\"options\\\":{\\\"value\\\":\\\"\\\"},\\\"type\\\":\\\"STATIC\\\"},\\\"lineColor\\\":{\\\"options\\\":{\\\"color\\\":\\\"#3d3d3d\\\"},\\\"type\\\":\\\"STATIC\\\"},\\\"lineWidth\\\":{\\\"options\\\":{\\\"size\\\":1},\\\"type\\\":\\\"STATIC\\\"},\\\"symbolizeAs\\\":{\\\"options\\\":{\\\"value\\\":\\\"circle\\\"}}},\\\"type\\\":\\\"VECTOR\\\"},\\\"type\\\":\\\"VECTOR\\\",\\\"visible\\\":true}]\",\"mapStateJSON\":\"{\\\"zoom\\\":10.95,\\\"center\\\":{\\\"lon\\\":51.38798,\\\"lat\\\":35.68414},\\\"timeFilters\\\":{\\\"from\\\":\\\"now-15h\\\",\\\"to\\\":\\\"now\\\"},\\\"refreshConfig\\\":{\\\"isPaused\\\":true,\\\"interval\\\":0},\\\"query\\\":{\\\"language\\\":\\\"lucene\\\",\\\"query\\\":\\\"\\\"},\\\"filters\\\":[],\\\"settings\\\":{\\\"autoFitToDataBounds\\\":false,\\\"backgroundColor\\\":\\\"#ffffff\\\",\\\"disableInteractive\\\":false,\\\"disableTooltipControl\\\":false,\\\"hideToolbarOverlay\\\":false,\\\"hideLayerControl\\\":false,\\\"hideViewControl\\\":false,\\\"initialLocation\\\":\\\"LAST_SAVED_LOCATION\\\",\\\"fixedLocation\\\":{\\\"lat\\\":0,\\\"lon\\\":0,\\\"zoom\\\":2},\\\"browserLocation\\\":{\\\"zoom\\\":2},\\\"maxZoom\\\":24,\\\"minZoom\\\":0,\\\"showScaleControl\\\":false,\\\"showSpatialFilters\\\":true,\\\"showTimesliderToggleButton\\\":true,\\\"spatialFiltersAlpa\\\":0.3,\\\"spatialFiltersFillColor\\\":\\\"#DA8B45\\\",\\\"spatialFiltersLineColor\\\":\\\"#DA8B45\\\"}}\",\"uiStateJSON\":\"{\\\"isLayerTOCOpen\\\":true,\\\"openTOCDetails\\\":[]}\",\"references\":[]},\"mapCenter\":{\"lat\":35.72051,\"lon\":51.37803,\"zoom\":10.95},\"mapBuffer\":{\"minLon\":51.15234,\"minLat\":35.60372,\"maxLon\":51.67969,\"maxLat\":35.88905},\"isLayerTOCOpen\":true,\"openTOCDetails\":[],\"hiddenLayers\":[],\"enhancements\":{}}}]",
+  "attributes.timeRestore": false,
+  "attributes.title": "Runner Dash",
+  "attributes.version": 1,
+  "coreMigrationVersion": "7.17.3",
+  "id": "c1397cf0-7f8c-11e9-b02d-53dea8180a7f",
+  "migrationVersion.dashboard": "7.17.3",
+  "references": [
+    {
+      "id": "48362dd0-7f8c-11e9-b02d-53dea8180a7f",
+      "name": "2:panel_2",
+      "type": "visualization"
+    },
+    {
+      "id": "cdb5dba0-7f8b-11e9-b02d-53dea8180a7f",
+      "name": "3:panel_3",
+      "type": "visualization"
+    },
+    {
+      "id": "769cd750-7f8c-11e9-b02d-53dea8180a7f",
+      "name": "4:panel_4",
+      "type": "visualization"
+    },
+    {
+      "id": "6c5a5250-7fa9-11e9-871a-5b4ee90de07e",
+      "name": "5:panel_5",
+      "type": "visualization"
+    },
+    {
+      "id": "d5145b30-8079-11e9-846a-91d0a70f35bb",
+      "name": "6:panel_6",
+      "type": "visualization"
+    },
+    {
+      "id": "c2830790-d967-11ee-9c3b-1d397bdc3faa",
+      "name": "4c751a3c-58f1-4c60-be4f-b9b1ef644a35:layer_1_source_index_pattern",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "dashboard",
+  "updated_at": "2024-03-04T04:48:36.865Z",
+  "version": "Wzk2OSwxXQ=="
+},
+{
+  "excludedObjects": [],
+  "excludedObjectsCount": 0,
+  "exportedCount": 8,
+  "missingRefCount": 0,
+  "missingReferences": []
+}
+]

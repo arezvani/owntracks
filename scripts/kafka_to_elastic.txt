@@ -1,0 +1,20 @@
+  curl -X "POST" "localhost:8083/connectors/" \
+     -H "Content-Type: application/json" \
+     -d $'{
+  "name": "es_sink_runner_location",
+  "config": {
+    "schema.ignore": "true",
+    "topics": "RUNNER_LOCATION",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter.schemas.enable": false,
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "key.ignore": "true",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "type.name": "kafkaconnect",
+    "topic.index.map": "RUNNER_LOCATION:runner_location",
+    "connection.url": "http://elastic-81592013:9200",
+    "transforms": "ExtractTimestamp",
+    "transforms.ExtractTimestamp.type": "org.apache.kafka.connect.transforms.InsertField$Value",
+    "transforms.ExtractTimestamp.timestamp.field" : "EVENT_TIME"
+  }
+}' 

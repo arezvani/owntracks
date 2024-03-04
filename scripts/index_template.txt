@@ -1,0 +1,48 @@
+curl -XPUT "http://localhost:9200/_template/kafkaconnect/" -H 'Content-Type: application/json' -d'
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      }
+    },
+    "mappings": {
+      "dynamic": "false",
+      "dynamic_templates": [],
+      "properties": {
+        "ALT": {
+          "type": "integer"
+        },
+        "BATT": {
+          "type": "integer"
+        },
+        "DIST_TO_FINISH": {
+          "type": "double"
+        },
+        "EVENT_TIME": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis||epoch_second"
+        },
+        "LOCATION": {
+          "type": "geo_point",
+          "ignore_malformed": false,
+          "ignore_z_value": true
+        },
+        "MAX_SPEED": {
+          "type": "integer"
+        },
+        "MIN_SPEED": {
+          "type": "integer"
+        },
+        "NUM_EVENTS": {
+          "type": "integer"
+        },
+        "VEL": {
+          "type": "double"
+        }
+      }
+    },
+    "aliases": {}
+  }
+}'
