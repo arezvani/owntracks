@@ -1,7 +1,7 @@
 | [Overview](/README.md) | [Phone Setup](/docs/phone.md)  | MQTT Server |[MQTT to Kafka](/docs/mqtt_kafka.md) |
 |---|----|----|-----|
 
-Establish an MQTT Server.  I used https://www.cloudmqtt.com/
+Establish an MQTT Server.  I used EMQX. Also you can use mqtt clouds like https://www.cloudmqtt.com/
 
 ![MQTT](mqtt-owntracks.png)
 
